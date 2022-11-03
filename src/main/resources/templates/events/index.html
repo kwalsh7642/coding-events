@@ -8,6 +8,11 @@
 
 <h1>All Events</h1>
 
+<p th:unless="${events} and ${events.size()}">No Events!</p>
+
+<! unless ^^this^^ boolean statement evaluates to true display this element/>
+<! says if above statement evaluates to true then boolean will NOT display default text/>
+
 <ul>
     <th:block th:each="event : ${events}">
         <li th:text="${event}"></li>
